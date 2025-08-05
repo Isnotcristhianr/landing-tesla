@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f1c40f; /* Color al pasar el cursor */
+}
+
+/* Ocultar el menú de hamburguesa por defecto */
+.menu-hamburguesa {
+  display: none;
+  cursor: pointer;
+}
+
+.barra {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para el menú de hamburguesa activo (animación) */
+.menu-hamburguesa.activo .barra:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-hamburguesa.activo .barra:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-hamburguesa.activo .barra:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px; /* Ajusta este valor si tu navbar tiene otra altura */
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-links.activo {
+    height: 180px; /* Altura del menú desplegado */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .menu-hamburguesa {
+    display: block;
+  }
+}
