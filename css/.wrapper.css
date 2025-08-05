@@ -1,0 +1,24 @@
+.wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 16rem;
+  justify-content: stretch;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  to {
+    transform: translateX(calc(-3 * 16rem)); /* Desplaza 3 imágenes */
+  }
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
