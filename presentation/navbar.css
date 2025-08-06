@@ -1,98 +1,97 @@
-/* Estilos generales */
+/* CSS Styling */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
+  height: 60px;
+  background-color: #fff;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
+.navbar-container {
   display: flex;
-  margin: 0;
+  /* Alinea todos los elementos a la izquierda */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar-logo {
+  /* Nuevo tamaño de fuente para el logo */
+  font-size: 28px; 
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  /* Elimina el margen para que esté más cerca de la esquina */
+  margin-right: 0; 
+}
+
+.navbar-logo img {
+  /* Aumenta el tamaño de la altura del logo */
+  height: 25px; 
+  /* Reduce el margen para que el texto esté más cerca de la imagen */
+  margin-right: 4px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 auto; /* Empuja el menú hacia la derecha */
   padding: 0;
 }
 
-.nav-links li {
-  margin-left: 1.5rem;
+.navbar-item {
+  margin: 0 15px;
 }
 
-.nav-links a {
-  color: white;
+.navbar-item a {
+  color: #000;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #f1c40f; /* Color al pasar el cursor */
+.navbar-item a:hover {
+  color: #555;
 }
 
-/* Ocultar el menú de hamburguesa por defecto */
-.menu-hamburguesa {
-  display: none;
-  cursor: pointer;
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Empuja los íconos hacia la derecha */
 }
 
-.barra {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
+.icon-link {
+  color: #000;
+  font-size: 20px;
+  margin-left: 20px;
+  transition: color 0.3s ease;
 }
 
-/* Estilos para el menú de hamburguesa activo (animación) */
-.menu-hamburguesa.activo .barra:nth-child(2) {
-  opacity: 0;
+.icon-link:hover {
+  color: #555;
 }
 
-.menu-hamburguesa.activo .barra:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.menu-hamburguesa.activo .barra:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Media Query para pantallas pequeñas (móviles) */
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px; /* Ajusta este valor si tu navbar tiene otra altura */
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #333;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
+  .navbar-menu, .navbar-icons {
+    display: none;
   }
-
-  .nav-links.activo {
-    height: 180px; /* Altura del menú desplegado */
-  }
-
-  .nav-links li {
-    margin: 1rem 0;
-  }
-
-  .menu-hamburguesa {
-    display: block;
+  .navbar-logo {
+    flex-grow: 1;
+    text-align: center;
   }
 }
