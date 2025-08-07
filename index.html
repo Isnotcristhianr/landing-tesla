@@ -1,201 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electric Cars, Solar & Clean Energy | Tesla</title>
-  
-  <link rel="stylesheet" href="presentation/navbar.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-
-    .slider {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-    }
-
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .slide.active {
-      opacity: 1;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.4);
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .content {
-      position: absolute;
-      z-index: 2;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: white;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .buttons button {
-      padding: 15px 30px;
-      font-size: 1em;
-      background-color: #007bff;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .buttons button:hover {
-      background-color: #0056b3;
-    }
-
-    .nav {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      z-index: 2;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .nav button {
-      background: rgba(0, 0, 0, 0.3);
-      color: white;
-      border: none;
-      font-size: 2em;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    .nav button:hover {
-      background: rgba(0, 0, 0, 0.6);
-    }
-  </style>
-
+  <title>Document</title>
+  <link rel="stylesheet" href="presentation/footer.css">
 </head>
 <body>
+  
+  <!-- ...otros contenidos de la página... -->
 
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="#" class="navbar-logo">
-        <img src="assets/img/logo-header.jpg" alt="Tesla Logo">
-      </a>
-      <ul class="navbar-menu">
-        <li class="navbar-item"><a href="#"><b>Vehicles</b></a></li>
-        <li class="navbar-item"><a href="#"><b>Energy</b></a></li>
-        <li class="navbar-item"><a href="#"><b>Charging</b></a></li>
-        <li class="navbar-item"><a href="#"><b>Discover</b></a></li>
-        <li class="navbar-item"><a href="#"><b>Shop</b></a></li>
-      </ul>
-      <div class="navbar-icons">
-        <a href="#" class="icon-link">
-          <i class="fas fa-question-circle"></i>
-        </a>
-        <a href="#" class="icon-link">
-          <i class="fas fa-light fa-globe"></i>
-        </a>
-        <a href="#" class="icon-link">
-          <i class="fas fa-user-circle"></i>
-        </a>
-      </div>
+  <!-- Footer estilo Tesla -->
+  <footer class="tesla-footer">
+    <div class="disclaimer-container">
+      <p><sup>1</sup> $7,500 federal tax credit available to eligible buyers who purchase and take delivery of a qualifying vehicle by September 30, 2025. Leases not eligible. Not all model trims will qualify. MSRP cap of $80,000 for Cybertruck and Model Y; $55,000 for Model 3 applies. Consult a tax professional regarding your personal eligibility.</p>
+      <p><sup>2</sup> Model X All-Wheel Drive starts at $91,630. Price includes Destination and Order Fees but exclude taxes and other fees. Subject to change. Vehicle shown has upgrades that will increase the price.</p>
+      <p><sup>3</sup> Model S All-Wheel Drive starts at $86,630. Price includes Destination and Order Fees but exclude taxes and other fees. Subject to change. Vehicle shown has upgrades that will increase the price.</p>
     </div>
-  </nav>
 
-  <div class="slider">
-  <!-- Slides -->
-  <div class="slide active" style="background-image: url('assets/img/car1.jpg');"></div>
-  <div class="slide" style="background-image: url('assets/img/car2.jpg');"></div>
-  <div class="slide" style="background-image: url('assets/img/car3.jpg');"></div>
+    <hr class="footer-divider">
 
-  <!-- Oscurecer -->
-  <div class="overlay"></div>
+    <nav class="footer-nav">
+      <span class="copyright">Tesla © 2025</span>
+      <a href="#" class="nav-link">Privacy &amp; Legal</a>
+      <a href="#" class="nav-link">Vehicle Recalls</a>
+      <a href="#" class="nav-link">Contact</a>
+      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">Get Updates</a>
+      <a href="#" class="nav-link">Locations</a>
+      <a href="#" class="nav-link">Learn</a>
+    </nav>
 
-  <!-- Contenido -->
-  <div class="content">
-    <h1>$7,500 Crédito Fiscal Federal Finaliza</h1>
-    <p>Inventario limitado — Entrega inmediata</p>
-    <div class="buttons">
-      <button onclick="location.href='#'">Ordenar Modelo 3</button>
-      <button onclick="location.href='#'">Ordenar Modelo Y</button>
+    <div class="footer-buttons">
+      <button class="footer-btn">
+        <span class="btn-icon">💬</span>
+        Ask a Question
+      </button>
+      <button class="footer-btn">
+        <span class="btn-icon">🚗</span>
+        Schedule a Drive Today
+      </button>
     </div>
-  </div>
 
-  <!-- Botones de navegación -->
-  <div class="nav">
-    <button onclick="prevSlide()">❮</button>
-    <button onclick="nextSlide()">❯</button>
-  </div>
-</div>
+    <div class="navigation-dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </footer>
 
-  <script src="script.js"></script>
-  <script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
-      if (i === index) slide.classList.add('active');
-    });
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  // Cambio automático cada 5 segundos
-  setInterval(nextSlide, 5000);
-</script>
 </body>
 </html>
