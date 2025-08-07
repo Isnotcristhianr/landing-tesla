@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Slider de Autos</title>
-  <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Cars, Solar & Clean Energy | Tesla</title>
+  
+  <link rel="stylesheet" href="presentation/navbar.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
     * {
       margin: 0;
       padding: 0;
@@ -112,10 +116,37 @@
       background: rgba(0, 0, 0, 0.6);
     }
   </style>
+
 </head>
 <body>
 
-<div class="slider">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <img src="assets/img/logo-header.jpg" alt="Tesla Logo">
+      </a>
+      <ul class="navbar-menu">
+        <li class="navbar-item"><a href="#"><b>Vehicles</b></a></li>
+        <li class="navbar-item"><a href="#"><b>Energy</b></a></li>
+        <li class="navbar-item"><a href="#"><b>Charging</b></a></li>
+        <li class="navbar-item"><a href="#"><b>Discover</b></a></li>
+        <li class="navbar-item"><a href="#"><b>Shop</b></a></li>
+      </ul>
+      <div class="navbar-icons">
+        <a href="#" class="icon-link">
+          <i class="fas fa-question-circle"></i>
+        </a>
+        <a href="#" class="icon-link">
+          <i class="fas fa-light fa-globe"></i>
+        </a>
+        <a href="#" class="icon-link">
+          <i class="fas fa-user-circle"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slider">
   <!-- Slides -->
   <div class="slide active" style="background-image: url('assets/img/car1.jpg');"></div>
   <div class="slide" style="background-image: url('assets/img/car2.jpg');"></div>
@@ -141,7 +172,8 @@
   </div>
 </div>
 
-<script>
+  <script src="script.js"></script>
+  <script>
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
 
@@ -165,6 +197,5 @@
   // Cambio automático cada 5 segundos
   setInterval(nextSlide, 5000);
 </script>
-
 </body>
 </html>
