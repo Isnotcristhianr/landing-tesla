@@ -1,0 +1,141 @@
+/* CSS Styling */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #fff;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  /* Alinea todos los elementos a la izquierda */
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar-logo {
+  /* Nuevo tamaño de fuente para el logo */
+  font-size: 28px; 
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  /* Elimina el margen para que esté más cerca de la esquina */
+  margin-right: 0; 
+}
+
+.navbar-logo img {
+  /* Aumenta el tamaño de la altura del logo */
+  height: 25px; 
+  /* Reduce el margen para que el texto esté más cerca de la imagen */
+  margin-right: 4px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 auto; /* Empuja el menú hacia la derecha */
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-item a:hover {
+  color: #555;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Empuja los íconos hacia la derecha */
+}
+
+.icon-link {
+  color: #000;
+  font-size: 20px;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #555;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  z-index: 2000;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  margin: 10px 0;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.mobile-menu a:hover {
+  color: #555;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .navbar-menu, .navbar-icons a:not(#menu-btn) {
+    display: none;
+  }
+  .navbar-logo {
+    flex-grow: 1;
+    text-align: center;
+  }
+  #menu-btn {
+    display: block;
+  }
+}
+
+/* Quitar subrayado y color morado de todos los enlaces del navbar */
+.navbar a, .navbar a:visited, .mobile-menu a, .icon-link {
+  color: #000;
+  text-decoration: none;
+}
