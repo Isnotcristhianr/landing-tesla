@@ -114,6 +114,95 @@
     .nav button:hover {
       background: rgba(0, 0, 0, 0.6);
     }
+
+    /* Estilos para el footer */
+    .tesla-footer {
+      background-color: #111;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .disclaimer-container {
+      margin-bottom: 20px;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+
+    .footer-divider {
+      border: none;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 20px 0;
+    }
+
+    .footer-nav {
+      margin-bottom: 20px;
+    }
+
+    .copyright {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.8em;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer-buttons {
+      margin-bottom: 20px;
+    }
+
+    .footer-btn {
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 0.9em;
+      cursor: pointer;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .footer-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-icon {
+      font-size: 1.2em;
+    }
+
+    .navigation-dots {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .dot.active {
+      opacity: 1;
+    }
   </style>
 
 </head>
@@ -255,6 +344,46 @@
 
   <!-- Agrega la ruta correcta para el navbar -->
   <script src="presentation/navbar.js"></script>
+
+  <!-- FOOTER DE TESLA -->
+<footer class="tesla-footer">
+    
+    
+    <!-- Línea separadora -->
+    <hr class="footer-divider">
+    
+    <!-- Copyright y enlaces de navegación -->
+    <div class="footer-nav">
+        <span class="copyright">Tesla © 2025</span>
+        <a href="#" class="nav-link">Privacy & Legal</a>
+        <a href="#" class="nav-link">Vehicle Recalls</a>
+        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">News</a>
+        <a href="#" class="nav-link">Get Updates</a>
+        <a href="#" class="nav-link">Locations</a>
+        <a href="#" class="nav-link">Learn</a>
+    </div>
+    
+    <!-- Botones interactivos -->
+    <div class="footer-buttons">
+        <button class="footer-btn">
+            <span class="btn-icon">💬</span>
+            Ask a Question
+        </button>
+        <button class="footer-btn">
+            <span class="btn-icon">🚗</span>
+            Schedule a Drive Today
+        </button>
+    </div>
+    
+    <!-- Puntos de navegación -->
+    <div class="navigation-dots">
+        <!-- Los puntos se crearán automáticamente con JavaScript -->
+    </div>
+</footer>
+
+<!-- Scripts del footer -->
+<script src="presentation/footer.js"></script>
 
 </body>
 
