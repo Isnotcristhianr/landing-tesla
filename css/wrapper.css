@@ -1,25 +1,60 @@
-
-.wrapper {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 16rem;
-  justify-content: stretch;
-  animation: animate 10s linear infinite;
+* {
+  box-sizing: border-box;
 }
 
-@keyframes animate {
-  to {
-    transform: translateX(calc(-3 * 16rem)); /* Desplaza 3 imágenes */
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #000000;
 }
 
 .carousel-container {
   position: relative;
+  max-width: 100%;
   overflow: hidden;
-  width: 100%;
+  height: 300px; /* altura fija */
+}
+
+.carousel-slide {
+  display: flex;
+  width: calc(300px * 6); /* 3 originales + 3 clones */
+  animation: scroll 15s linear infinite;
 }
 
 .carousel-slide img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px; /* altura fija para todas */
+  object-fit: cover; /* recorte proporcional sin deformación */
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-900px); /* 3 imágenes * 300px */
+  }
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
